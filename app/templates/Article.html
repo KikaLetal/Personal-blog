@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New post</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/blocks/blog.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="Header_Navig">
+                <div class="Header_Navig_Home">
+                    <a href="/" >Home</a>
+                </div>
+                {% if session['role'] == 'admin' %}
+                    <div class="Header_Navig_AdminPanel">
+                        <a href="/LogOut">Log out</a>
+                    </div>
+                    
+                {% else %}
+                    <div class="Header_Navig_AdminPanel">
+                        <a href="/autorization" >Admin panel</a>
+                    </div>
+                {% endif %}
+
+                
+            </div>
+        </div>
+    </header>
+    <section id="article" class="article">
+        <div class="article_container">
+            <div class="container_inner">
+                <div class="container_inner_title">
+                    <p class="title">{{ post.title }}</p>
+                    <p class="title_date">{{ post.date }}</p>
+                </div>
+                <div class="text-container">
+                    <p class="text">{{ post.text }}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

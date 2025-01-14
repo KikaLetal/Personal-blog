@@ -1,0 +1,39 @@
+
+.form-control{
+    box-sizing: border-box; 
+    border-radius: 8px;
+    min-width: 700px;
+    min-height: 700px;
+    padding: 20px;
+    background-color: #a2dcc7;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    resize: none;
+}
+
+.form-control-input-title{
+    font-size:16px;
+    font-weight:bold;
+}
+
+.form-control-input-text{
+    box-sizing: border-box; /* Включение padding в размеры блока */
+    width:  100%;
+    height: 600px;
+    font-size:16px;
+    font-weight:bold;
+    vertical-align: top; /* Убедиться, что текст выравнен по верхнему краю */
+    overflow: auto; /* Добавить прокрутку, если текст превышает поле */
+    resize: none;
+
+}
+
+.btn-succsess{
+    background-color: #3a3858;
+    color: aliceblue;
+    border-radius: 10px;
+    max-width: 100px;
+    padding: 10px;
+    margin: 0 auto; /* Центрируем кнопку */
+}

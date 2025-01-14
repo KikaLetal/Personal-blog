@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/blocks/table.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/blocks/article.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="Header_Navig">
+                <div class="Header_Navig_Home">
+                    <a href="/" >Home</a>
+                </div>
+                {% if session['role'] == 'admin' %}
+                    <div class="Header_Navig_AdminPanel">
+                        <a href="/LogOut">Log out</a>
+                    </div>
+                    
+                {% else %}
+                    <div class="Header_Navig_AdminPanel">
+                        <a href="/autorization" >Admin panel</a>
+                    </div>
+                {% endif %}
+
+                
+            </div>
+        </div>
+    </header>
+    
+    <section id="articles", class="articles">
+        <div class="container">
+            <div class="articles_container">
+                    <div class="articles-navpanel">
+                        <h1 class="page_title">Personal blog</h1>
+                        {% if session['role'] == 'admin' %}
+                            <a class="article_link" href="/CreatePost">Add post</a>
+                        {% endif %}
+                    </div>
+                <table class="articles_table">
+                    <thead>
+                        <th>Post title</th>
+                        <th>Post date</th>
+                        
+                    </thead>
+                    <tbody>
+                        {% for post in posts %}
+                                <tr>
+                                    <td class="td_title">
+                                        <a href="{{ url_for('Post.ARTICLE', id=post.id) }}"><div class="post_title">
+                                            {{ post.title }}
+                                        </div></a>
+                                    </td>
+                                    <td class="td_date">{{ post.date }}</td>
+                                    {% if session['role'] == 'admin' %}
+                                        <td class="admin_buttons"><a class="article_link" href="{{ url_for('Post.Edit', id=post.id) }}">Edit</a>
+                                            <a class="article_link" href="{{ url_for('Post.Delete', id=post.id) }}">Delete</a>
+                                        </td>
+                                    {% endif %}
+                                </tr>
+
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

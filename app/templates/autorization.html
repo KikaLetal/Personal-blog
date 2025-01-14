@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/blocks/login.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="Header_Navig">
+                <div class="Header_Navig_Home">
+                    <a href="/" >Home</a>
+                </div>
+                <div class="Header_Navig_AdminPanel">
+                    <a href="/CreatePost" >Admin panel</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <section class="login-sec">
+        <div class="container-login">
+            <form method="POST" class="form-control">
+                <div class="container-login-content">
+                    <p class="title">Log In</p>
+                    <input name="login" type="text" placeholder="Login" class="form-control-input-title" required>
+                    <input name="password" type="password" placeholder="Password" class="form-control-input-text" required>
+                    <input type="submit" value="Enter" class="btn-succsess">
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

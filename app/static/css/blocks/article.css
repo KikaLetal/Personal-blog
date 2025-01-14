@@ -1,0 +1,42 @@
+.article{
+    padding: 0; /* Убираем внутренние отступы */
+    margin: 0; /* Убираем внешние отступы */
+    box-sizing: border-box; /* Учитываем границы в размерах */
+    box-sizing: border-box;
+    height: calc(100% - 57px)
+}
+
+.article_container{
+    display: flex;
+    gap: 20px;
+    background-color: #35353a;
+    max-width: 1480px;
+    height: 100%;
+
+}
+
+.articles-navpanel{
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container_inner{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a.article_link{
+    color: #f9f9f9;
+    margin-left: 10px;
+}
+a.article_link:first-child{
+    margin-left: 20px;
+}
+
+.td_date{
+    color: #bac9c4d9;
+}

@@ -1,0 +1,108 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 24px;
+    background-color: #212123;
+}
+
+a{    
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.container{
+    margin: auto;
+    max-width: 1480px;
+    background-color: #45444f;
+}
+
+
+header{
+    position: sticky;
+    top: 0;
+    background-color: #45444f;
+}
+
+.Header_Navig{
+    padding-left: 20px;
+    padding-right: 20px;
+    min-height: 57px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.Header_Navig_AdminPanel{
+    margin-left: auto;
+}
+
+
+.article{
+    padding: 0; /* Убираем внутренние отступы */
+    margin: 0; /* Убираем внешние отступы */
+    box-sizing: border-box; /* Учитываем границы в размерах */
+    box-sizing: border-box;
+    height: calc(100% - 57px)
+}
+
+.article_container{
+    background-color: #35353a;
+    margin: auto;
+    max-width: 1480px;
+    height: 100%;
+
+}
+
+.container_inner{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-control{
+    box-sizing: border-box; 
+    border-radius: 8px;
+    min-width: 700px;
+    min-height: 700px;
+    padding: 20px;
+    background-color: #a2dcc7;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    resize: none;
+}
+
+.form-control-input-title{
+    font-size:16px;
+    font-weight:bold;
+}
+
+.form-control-input-text{
+    box-sizing: border-box; /* Включение padding в размеры блока */
+    width:  100%;
+    height: 600px;
+    font-size:16px;
+    font-weight:bold;
+    vertical-align: top; /* Убедиться, что текст выравнен по верхнему краю */
+    overflow: auto; /* Добавить прокрутку, если текст превышает поле */
+    resize: none;
+
+}
+
+.btn-succsess{
+    background-color: #3a3858;
+    color: aliceblue;
+    border-radius: 10px;
+    max-width: 100px;
+    padding: 10px;
+    margin: 0 auto; /* Центрируем кнопку */
+}
+
+.title{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+}

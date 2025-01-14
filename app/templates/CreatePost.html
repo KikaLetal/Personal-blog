@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New post</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Create.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="Header_Navig">
+                <div class="Header_Navig_Home">
+                    <a href="/" >Home</a>
+                </div>
+                {% if session['role'] == 'admin' %}
+                    <div class="Header_Navig_AdminPanel">
+                        <a href="/LogOut">Log out</a>
+                    </div>
+                    
+                {% else %}
+                    <div class="Header_Navig_AdminPanel">
+                        <a href="/autorization" >Admin panel</a>
+                    </div>
+                {% endif %}
+
+                
+            </div>
+        </div>
+    </header>
+    <section id="article" class="article">
+        <div class="article_container">
+            <div class="container_inner">
+                <form method="POST" class="form-control">
+                    <p class="title">New post</p>
+                    <input name="title" type="text" placeholder="title" class="form-control-input-title" required>
+                    <textarea name="text" type="text" placeholder="enter text" class="form-control-input-text" required></textarea>
+                    <input type="submit" value="publish post" class="btn-succsess">
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

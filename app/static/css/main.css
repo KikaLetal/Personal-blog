@@ -1,0 +1,41 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 24px;
+    background-color: #212123;
+    color: aliceblue;
+}
+
+a{    
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.container{
+    margin: auto;
+    max-width: 1480px;
+    
+}
+
+
+header{
+    position: sticky;
+    top: 0;
+    background-color: #45444f;
+}
+
+.Header_Navig{
+    padding-left: 20px;
+    padding-right: 20px;
+    min-height: 57px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.Header_Navig_AdminPanel{
+    margin-left: auto;
+}
+
